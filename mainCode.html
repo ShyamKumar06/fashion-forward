@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Forward by Parati Singh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Base resets */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; color: #333; }
+
+    /* Italian palette: green, white, red accents */
+    :root {
+      --green: #008C45;
+      --white: #FFFFFF;
+      --red: #CD212A;
+      --gray-light: #F8F8F8;
+      --gray-dark: #555;
+    }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--white); position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .logo { font-size: 1.6rem; font-weight: 700; color: var(--green); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { text-decoration: none; font-weight: 500; color: var(--gray-dark); transition: color 0.3s; }
+    nav a:hover { color: var(--green); }
+
+    .hero { position: relative; height: 90vh; background: url('https://source.unsplash.com/1600x900/?fashion,model,italy') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); }
+    .hero-content { position: relative; text-align: center; color: var(--white); z-index: 1; }
+    .hero-content h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+    .hero-content p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .btn { padding: 0.75rem 1.5rem; background: var(--red); color: var(--white); text-transform: uppercase; font-weight: 500; border: none; cursor: pointer; transition: background 0.3s; }
+    .btn:hover { background: var(--green); }
+
+    .catalog { padding: 4rem 2rem; background: var(--gray-light); display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .item-card { background: var(--white); border-radius: 0.5rem; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .item-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .item-card img { width: 100%; display: block; }
+    .item-info { padding: 1rem; }
+    .item-title { font-weight: 500; margin-bottom: 0.5rem; color: var(--gray-dark); }
+    .item-price { font-weight: 700; color: var(--red); }
+
+    footer { background: var(--white); padding: 3rem 2rem; text-align: center; }
+    .newsletter p { margin-bottom: 0.5rem; font-weight: 500; }
+    .newsletter input { padding: 0.75rem 1rem; width: 250px; border: 1px solid #ccc; border-radius: 2rem 0 0 2rem; }
+    .newsletter button { padding: 0.8rem 1.5rem; border: none; background: var(--green); color: var(--white); border-radius: 0 2rem 2rem 0; cursor: pointer; }
+
+    .socials { margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; }
+    .socials a { text-decoration: none; font-size: 1.2rem; color: var(--gray-dark); transition: color 0.3s; }
+    .socials a:hover { color: var(--red); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Fashion Forward by Parati Singh</div>
+    <nav>
+      <ul>
+        <li><a href="#catalog">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Elevate Your Style</h1>
+      <p>Discover the latest Italian-inspired trends curated just for you.</p>
+      <button class="btn">Shop Now</button>
+    </div>
+  </section>
+
+  <section id="catalog" class="catalog">
+    <!-- Example Items -->
+    <div class="item-card">
+      <img src="https://source.unsplash.com/400x400/?dress,italian" alt="Floral Summer Dress" />
+      <div class="item-info">
+        <div class="item-title">Floral Summer Dress</div>
+        <div class="item-price">$89.99</div>
+      </div>
+    </div>
+    <div class="item-card">
+      <img src="https://source.unsplash.com/400x400/?jacket,leather,italy" alt="Leather Biker Jacket" />
+      <div class="item-info">
+        <div class="item-title">Leather Biker Jacket</div>
+        <div class="item-price">$129.99</div>
+      </div>
+    </div>
+    <div class="item-card">
+      <img src="https://source.unsplash.com/400x400/?shoes,sneakers,italy" alt="Classic Sneakers" />
+      <div class="item-info">
+        <div class="item-title">Classic Sneakers</div>
+        <div class="item-price">$59.99</div>
+      </div>
+    </div>
+    <div class="item-card">
+      <img src="https://source.unsplash.com/400x400/?handbag,italy" alt="Minimalist Handbag" />
+      <div class="item-info">
+        <div class="item-title">Minimalist Handbag</div>
+        <div class="item-price">$79.99</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="newsletter">
+      <p>Subscribe to our newsletter</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 Fashion Forward by Parati Singh. All rights reserved.</p>
+  </footer>
+</body>
+</html>
